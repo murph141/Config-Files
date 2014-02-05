@@ -1,0 +1,16 @@
+Config {font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true",
+        bgColor = "#000000",
+        fgColor = "grey",
+        position = Static { xpos = 0, ypos = 0, width = 1366, height = 16 },
+        commands = [Run Network "wlp1s0" ["-L","70","-H","1024","--normal","yellow","--high","red","--low","green"] 10,
+                    Run Com "/home/eric/xmonad/memusage.sh" [] "mem" 10,
+                    Run Date "%a %b %d %H:%M" "date" 10,
+                    Run Weather "KLAF" ["-t","<tempF>F","-L","55","-H","80","--normal","green","--high","red","--low","lightblue"] 36000,
+                    Run Com "/home/eric/xmonad/battery.sh" [] "battery" 60,
+                    Run Com "/home/eric/xmonad/cpuusage.sh" [] "cpu" 10,
+                    Run StdinReader
+                   ],
+        sepChar = "%",
+        alignSep = "}{",
+        template = "%StdinReader%}{ <fc=white>%KLAF% ~ %battery% ~ %cpu% ~ %mem% ~ %wlp1s0% ~ %date% </fc>"
+       }

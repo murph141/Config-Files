@@ -1,0 +1,64 @@
+urxvt.depth: 32
+urxvt.background: [70]#050C12
+!urxvt.foreground: #FAFCF9
+urxvt.foreground: #FFFFFF
+urxvt.scrollBar: false
+urxvt.font: xft:Terminus:antialias=false:size=8
+
+!black
+!*color0:         #808080
+!*color8:         #727272
+!red (H:0)
+!*color1:         #c88e90
+!*color9:         #c77174
+!green (H:120)
+!*color2:         #90c88e
+!*color10:        #74c771
+!brown/yellow (H:50)
+!*color3:         #c8bc8e
+!*color11:        #c7b671
+!blue (H:240)
+!*color4:         #8e90c8
+!*color12:        #7174c7
+!magenta (H:270)
+!*color5:         #b28ec8
+!*color13:        #9971c7
+!cyan (H:180)
+!*color6:         #8ec8c6
+!*color14:        #71c7c3
+!white (S:0)
+!*color7:         #fafcf9
+!*color15:        #c7c7c7
+
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3

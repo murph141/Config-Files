@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $1 == 'none' ]; then
+  startx ./minimal.xinitrc
+elif [ $1 == 'xmonad' ]; then
+  startx 
+else
+  echo 'Option not found'
+fi
