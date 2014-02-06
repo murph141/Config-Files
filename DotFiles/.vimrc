@@ -43,7 +43,6 @@ set noerrorbells visualbell t_vb=
 set nocompatible
 
 " Status line formatting
-
 set viminfo='10,\"100,:20,%,n~/.viminfo
 set statusline=%F%m%r%h%w\ \|\ Line:\ %l/%L[%p%%]\ \|\ Col:\ %v\ \|\ Format:\ %{&ff}\ \|\ Type:\ %Y
 set laststatus=2

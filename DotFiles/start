@@ -3,6 +3,7 @@
 # Make sure there is one and only one argument
 if [ $# != 1 ]; then
   echo "Please enter an argument"
+  exit 1
 fi
 
 # Check the argument passed
@@ -12,4 +13,5 @@ elif [ $1 == 'xmonad' ]; then
   startx 
 else
   echo "Usage ./start arg1"
+  exit 1
 fi
