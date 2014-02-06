@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# Grab the percentage from top
 percent=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
+
+# Convert the percentage to a float
 percent=$(echo "$percent * 1.0" | bc)
 
+# Change the color displayed according to the percentage used
 if [[ $(echo " $percent < 1" | bc) -eq 1 ]]; then
   percent="CPU: <fc=green>0$percent</fc>"
 elif [[ $(echo " $percent < 10" | bc) -eq 1 ]]; then
@@ -15,4 +19,5 @@ else
   percent="CPU: <fc=red>$percent</fc>"
 fi
 
+# Output the percentage
 echo $percent

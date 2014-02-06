@@ -65,13 +65,20 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-# Personal key bindings
+#######################################
+# Personal key bindings               #
+# Requires slock, dmenu, and scrot    #
+#######################################
+
+# Runs dmenu on super (Most likely the Windows Key) + p
 "dmenu_run"
   Mod4 + Super_L + p
 
+# Runs slock on super + l (Similar to Windows + l to lock on Win7)
 "slock"
   Mod4 + Super_L + l
 
+# Takes a screenshot on super + s (Saves as picture.jpg)
 "scrot picture.jpg"
   Mod4 + Super_L + s
 

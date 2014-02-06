@@ -1,9 +1,13 @@
+! Urxvt specific options
 urxvt.depth: 32
 urxvt.background: [70]#050C12
 !urxvt.foreground: #FAFCF9
 urxvt.foreground: #FFFFFF
 urxvt.scrollBar: false
 urxvt.font: xft:Terminus:antialias=false:size=8
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Old configurations
 
 !black
 !*color0:         #808080
@@ -29,7 +33,7 @@ urxvt.font: xft:Terminus:antialias=false:size=8
 !white (S:0)
 !*color7:         #fafcf9
 !*color15:        #c7c7c7
-
+!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !! black dark/light
 *color0: #073642

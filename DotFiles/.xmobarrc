@@ -1,7 +1,13 @@
+-- Configuration for xmobar (My Status Bar)
+
+-- Use a specific font, size, and turn on anti aliasing
 Config {font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true",
-        bgColor = "#000000",
-        fgColor = "grey",
-        position = Static { xpos = 0, ypos = 0, width = 1366, height = 16 },
+        bgColor = "#000000", -- Background color is black
+        fgColor = "grey", -- Foreground color is grey
+        position = Static { xpos = 0, ypos = 0, width = 1366, height = 16 }, -- Size of the bar, very specific, may need to be changed on different computers
+
+        -- Commands that are run to get details about the computer
+
         commands = [Run Network "wlp1s0" ["-L","70","-H","1024","--normal","yellow","--high","red","--low","green"] 10,
                     Run Com "/home/eric/xmonad/memusage.sh" [] "mem" 10,
                     Run Date "%a %b %d %H:%M" "date" 10,
@@ -10,7 +16,10 @@ Config {font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true",
                     Run Com "/home/eric/xmonad/cpuusage.sh" [] "cpu" 10,
                     Run StdinReader
                    ],
-        sepChar = "%",
-        alignSep = "}{",
+
+        sepChar = "%", -- Set the separation character to %
+        alignSep = "}{", -- Align separated is }{
+
+        -- Call the commands that were run to earlier to put on the status bar
         template = "%StdinReader%}{ <fc=white>%KLAF% ~ %battery% ~ %cpu% ~ %mem% ~ %wlp1s0% ~ %date% </fc>"
        }

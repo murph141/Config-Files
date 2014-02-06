@@ -1,9 +1,15 @@
 #!/bin/bash
 
+# Make sure there is one and only one argument
+if [ $# != 1 ]; then
+  echo "Please enter an argument"
+fi
+
+# Check the argument passed
 if [ $1 == 'none' ]; then
   startx ./minimal.xinitrc
 elif [ $1 == 'xmonad' ]; then
   startx 
 else
-  echo 'Option not found'
+  echo "Usage ./start arg1"
 fi
