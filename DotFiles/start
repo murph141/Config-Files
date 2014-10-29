@@ -2,15 +2,16 @@
 
 # Make sure there is one and only one argument
 if [ $# != 1 ]; then
-  echo "Please enter an argument"
+  echo "Usage ./start arg1"
   exit 1
 fi
 
+# Assuming all config files are stored in the users home directory
 # Check the argument passed
-if [ $1 == 'none' ]; then
-  startx ./minimal.xinitrc
-elif [ $1 == 'xmonad' ]; then
-  startx 
+if [[ $1 == 'none' || $1 == 'minimal' ]]; then
+  startx ~/minimal.xinitrc
+elif [[ $1 == 'xmonad' ]]; then
+  startx ~/.xinitrc
 else
   echo "Usage ./start arg1"
   exit 1

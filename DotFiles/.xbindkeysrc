@@ -82,6 +82,9 @@
 "scrot picture.jpg"
   Mod4 + Super_L + s
 
+# Exits the session
+"killall urxvt"
+  Mod4 + Super_L + Shift + q
 
 ##################################
 # End of xbindkeys configuration #

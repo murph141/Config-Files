@@ -22,7 +22,7 @@ fi
 # If the battery is fully charged, only display the percentage
 # If the battery isn't fully charged, display the time
 if [ $time != '' ]; then
-  echo "Battery: $percent (<fc=lightgreen>$time</fc>)"
+  echo "Battery: $percent (<fc=lightblue>$time</fc>)"
 else
   echo "Battery: $percent"
 fi
