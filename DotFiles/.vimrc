@@ -1,14 +1,6 @@
-" Enable coding syntax
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+" Initial Setup
 syntax enable
-map <UP> <nop>
-map <DOWN> <nop>
-map <LEFT> <nop>
-map <RIGHT> <nop>
-inoremap <UP> <nop>
-inoremap <DOWN> <nop>
-inoremap <LEFT> <nop>
-inoremap <RIGHT> <nop>
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 set t_Co=256
 let g:tex_flavor='latex'
 set grepprg=grep\ -nH\ $*
@@ -18,33 +10,42 @@ set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/afte
 filetype indent on
 filetype plugin on
 
-" Change indentation to 2 spaces instead of tabs
-set expandtab
-set shiftwidth=2
-set tabstop=2
+" Change indentation
+au FileType c setl sw=2 sts=2
+au FileType python setl sw=4 sts=4
 set expandtab
 set autoindent
 set smartindent
 
+" Key Mappings
+map <UP> <nop>
+map <DOWN> <nop>
+map <LEFT> <nop>
+map <RIGHT> <nop>
+inoremap <UP> <nop>
+inoremap <DOWN> <nop>
+inoremap <LEFT> <nop>
+inoremap <RIGHT> <nop>
+
 " Misc
-set incsearch
+set backspace=eol,start,indent
 set hlsearch
+set incsearch
+set magic
+set mat=2
+set nocompatible
+set noerrorbells visualbell t_vb=
+set noswapfile
 set nu
 set ruler
-set wildmenu
-set backspace=eol,start,indent
-set smartcase
 set showmatch
-set mat=2
-set magic
+set smartcase
+set wildmenu
 set wrap
-set noswapfile
-set noerrorbells visualbell t_vb=
-set nocompatible
 
 " Status line formatting
-set viminfo='10,\"100,:20,%,n~/.viminfo
 set statusline=%F%m%r%h%w\ \|\ Line:\ %l/%L[%p%%]\ \|\ Col:\ %v\ \|\ Format:\ %{&ff}\ \|\ Type:\ %Y
 set laststatus=2
-highlight StatusLine term=reverse ctermbg=White ctermfg=Black
+set viminfo='10,\"100,:20,%,n~/.viminfo
 highlight ModeMsg cterm=bold ctermfg=Magenta
+highlight StatusLine term=reverse ctermbg=White ctermfg=Black
