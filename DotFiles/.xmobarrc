@@ -8,12 +8,12 @@ Config {font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true",
 
         -- Commands that are run to get details about the computer
 
-        commands = [Run Network "wlp1s0" ["-L","70","-H","1024","--normal","yellow","--high","red","--low","green"] 10,
-                    Run Com "/home/eric/xmonad/memusage.sh" [] "mem" 10,
+        commands = [Run Network "wlp1s0" ["-L","70000","-H","1024000","--normal","yellow","--high","red","--low","green"] 10,
                     Run Date "%a %b %d %H:%M" "date" 10,
                     Run Weather "KLAF" ["-t","<tempF>F","-L","55","-H","80","--normal","green","--high","red","--low","lightblue"] 36000,
-                    Run Com "/home/eric/xmonad/battery.sh" [] "battery" 60,
-                    Run Com "/home/eric/xmonad/cpuusage.sh" [] "cpu" 10,
+										Run Battery ["-t", "Battery: <left>% (<timeleft>)", "-L", "25", "-H", "75", "--low", "red", "--normal", "yellow", "--high", "green"] 10,
+                    Run MultiCpu ["-t", "CPU: <total>%", "-d", "1", "-L", "10", "-H", "35", "--low", "green", "--normal", "yellow", "--high", "red"] 10,
+										Run Memory ["-t", "MEM: <usedratio>%", "-d", "1", "-L", "10", "-H", "35", "--low", "green", "--normal", "yellow", "--high", "red"] 10,
                     Run StdinReader
                    ],
 
@@ -21,5 +21,5 @@ Config {font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true",
         alignSep = "}{", -- Align separated is }{
 
         -- Call the commands that were run to earlier to put on the status bar
-        template = "%StdinReader%}{ <fc=white>%KLAF% ~ %battery% ~ %cpu% ~ %mem% ~ %wlp1s0% ~ %date% </fc>"
+        template = "%StdinReader%}{ <fc=white>%KLAF% ~ %battery% ~ %multicpu% ~ %memory% ~ %wlp1s0% ~ %date% </fc>"
        }

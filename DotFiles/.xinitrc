@@ -14,10 +14,13 @@ xautolock -time 10 -locker slock &
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Set the background and scale it
-feh --bg-scale /home/eric/Pictures/Backgrounds/AutumnLeaves.jpg &
+feh --bg-scale /home/eric/Pictures/Backgrounds/FallColors.jpg &
 
 # Set the cursor in the x session
 xsetroot -cursor_name left_ptr &
+
+# Turn off touchpad
+synclient TouchpadOff=1 &
 
 # Start up xmonad (WM)
 exec xmonad

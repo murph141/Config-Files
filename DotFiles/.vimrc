@@ -11,8 +11,8 @@ filetype indent on
 filetype plugin on
 
 " Change indentation
-au FileType c setl sw=2 sts=2 ts=2
-au FileType python setl sw=4 sts=4 ts=4
+au FileType c setl sw=2 ts=2 sts=2
+au FileType python setl sw=4 ts=4 sts=4
 set expandtab
 set autoindent
 set smartindent
@@ -29,9 +29,9 @@ inoremap <RIGHT> <nop>
 
 " Misc
 set backspace=eol,start,indent
-set ts=2
-set sts=2
 set sw=2
+set sts=2
+set tabstop=2
 set hlsearch
 set incsearch
 set magic

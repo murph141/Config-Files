@@ -6,36 +6,7 @@ urxvt.foreground: #FFFFFF
 urxvt.scrollBar: false
 urxvt.font: xft:Terminus:antialias=false:size=8
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Old configurations
-
-!black
-!*color0:         #808080
-!*color8:         #727272
-!red (H:0)
-!*color1:         #c88e90
-!*color9:         #c77174
-!green (H:120)
-!*color2:         #90c88e
-!*color10:        #74c771
-!brown/yellow (H:50)
-!*color3:         #c8bc8e
-!*color11:        #c7b671
-!blue (H:240)
-!*color4:         #8e90c8
-!*color12:        #7174c7
-!magenta (H:270)
-!*color5:         #b28ec8
-!*color13:        #9971c7
-!cyan (H:180)
-!*color6:         #8ec8c6
-!*color14:        #71c7c3
-!white (S:0)
-!*color7:         #fafcf9
-!*color15:        #c7c7c7
-!!!!!!!!!!!!!!!!!!!!!!!!!
-
-!! black dark/light
+! black dark/light
 *color0: #073642
 *color8: #002b36
 

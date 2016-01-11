@@ -86,6 +86,14 @@
 "killall urxvt"
   Mod4 + Super_L + Shift + q
 
+# Turn off touchpad
+"synclient TouchpadOff=1"
+  Mod4 + Super_L + Shift + t
+
+# Turn on touchpad
+"synclient TouchpadOff=0"
+  Mod4 + Super_L + Shift + r
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
