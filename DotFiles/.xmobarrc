@@ -10,8 +10,8 @@ Config {font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true",
 
         commands = [Run Network "wlp1s0" ["-L","70000","-H","1024000","--normal","yellow","--high","red","--low","green"] 10,
                     Run Date "%a %b %d %H:%M" "date" 10,
-                    Run Weather "KLAF" ["-t","<tempF>F","-L","55","-H","80","--normal","green","--high","red","--low","lightblue"] 36000,
-										Run Battery ["-t", "Battery: <left>% (<timeleft>)", "-L", "25", "-H", "75", "--low", "red", "--normal", "yellow", "--high", "green"] 10,
+                    Run Weather "KSJC" ["-t","<tempF>F","-L","60","-H","80","--normal","green","--high","red","--low","lightblue"] 360,
+										Run Battery ["-t", "Battery: <left>% (<acstatus>)", "-L", "25", "-H", "75", "--low", "red", "--normal", "yellow", "--high", "green", "--", "-O", "Charging", "-o", "<fc=lightblue><timeleft></fc>", "-i", "Idle"] 10,
                     Run MultiCpu ["-t", "CPU: <total>%", "-d", "1", "-L", "10", "-H", "35", "--low", "green", "--normal", "yellow", "--high", "red"] 10,
 										Run Memory ["-t", "MEM: <usedratio>%", "-d", "1", "-L", "10", "-H", "35", "--low", "green", "--normal", "yellow", "--high", "red"] 10,
                     Run StdinReader
