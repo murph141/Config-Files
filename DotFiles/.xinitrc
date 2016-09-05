@@ -14,7 +14,7 @@ xautolock -time 10 -locker slock &
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Set the background and scale it
-feh --bg-scale /home/eric/Pictures/Backgrounds/FallColors.jpg &
+feh --bg-scale ~/Pictures/Backgrounds/FallColors.jpg &
 
 # Set the cursor in the x session
 xsetroot -cursor_name left_ptr &

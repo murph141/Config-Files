@@ -11,7 +11,7 @@ xautolock -time 10 -locker slock &
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Have feh set the background and scale it
-feh --bg-scale /home/eric/Pictures/Backgrounds/TheEndOfTime.jpg &
+feh --bg-scale ~/Pictures/Backgrounds/TheEndOfTime.jpg &
 
 # Set the cursor in X
 xsetroot -cursor_name left_ptr &

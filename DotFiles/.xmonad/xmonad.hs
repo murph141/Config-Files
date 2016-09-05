@@ -23,7 +23,7 @@ myManageHook = composeAll
 -- Main configurations
 main = do
   -- Spawn xmobar with its configuration file
-  xmproc <- spawnPipe "/usr/bin/xmobar /home/eric/.xmobarrc" 
+  xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc" 
 
   -- Call xmonad with the default configuration
   xmonad $ defaultConfig
