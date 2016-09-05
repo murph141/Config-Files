@@ -15,6 +15,8 @@ alias rm='rm -i'
 # Start mpd (music player daemon) and then run ncmpcpp
 alias music="mpd && ncmpcpp"
 
+MPD_HOST=~/.mpd/socket
+
 # Bash prompt
 # user@hash Working_Directory
 PS1='[\u@\h \W]\$ '
