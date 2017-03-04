@@ -1,0 +1,25 @@
+# IMAP
+set imap_user = ""
+set imap_pass = ""
+set spoolfile = "imaps://imap.gmail.com/INBOX"
+set folder = "imaps://imap.gmail.com/"
+set record = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set mbox = "imaps://imap.gmail.com/[Gmail]/All Mail"
+set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts"
+
+# SMTP
+set smtp_url = "smtps://$imap_user@smtp.gmail.com"
+set smtp_pass = $imap_pass
+set ssl_force_tls = yes
+unset record
+
+# Misc
+set send_charset="us-ascii:utf-8"
+set charset = UTF-8
+set editor = vim
+set edit_headers = yes
+
+set realname = ""
+unset use_domain
+set from = $imap_user
+set use_from = yes

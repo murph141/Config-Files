@@ -11,11 +11,14 @@ filetype indent on
 filetype plugin on
 
 " Change indentation
-au FileType c setl sw=2 ts=2 sts=2
+au FileType c setl sw=2 ts=2 sts=2 cc=80 formatoptions+=t
 au FileType python setl sw=4 ts=4 sts=4
 set expandtab
 set autoindent
 set smartindent
+set tw=80
+set list
+set listchars=tab:>-,trail:-,extends:>,precedes:<
 
 " Key Mappings
 map <UP> <nop>
@@ -52,3 +55,4 @@ set laststatus=2
 set viminfo='10,\"100,:20,%,n~/.viminfo
 highlight ModeMsg cterm=bold ctermfg=Magenta
 highlight StatusLine term=reverse ctermbg=White ctermfg=Black
+highlight ColorColumn ctermbg=darkred
